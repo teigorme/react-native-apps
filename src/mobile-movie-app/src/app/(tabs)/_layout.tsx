@@ -18,11 +18,12 @@ const TabsLayout = () => {
           backgroundColor: "#0f0D23",
           borderRadius: 50,
           marginHorizontal: 10,
-          marginBottom: 15,
+          marginBottom: 38,
           height: 52,
           position: "absolute",
           overflow: "hidden",
           borderWidth: 1,
+          borderTopWidth: 1,
           borderColor: "#0f0D23",
         },
       }}
