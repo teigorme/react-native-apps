@@ -14,9 +14,8 @@ import MovieCard from "@/src/shared/components/movie-card";
 
 const HomeView = ({
    router,
-   movies,
-   moviesError,
-   moviesLoading,
+   data,
+   error,loading
 }: ReturnType<typeof useHomeModel>) => {
    return (
       <View className="flex-1 bg-primary">
@@ -33,14 +32,16 @@ const HomeView = ({
                source={icons.logo}
                className="w-12 h-10 mt-20 mb-5 mx-auto"
             />
-            {moviesLoading ? (
+            {loading ? (
                <ActivityIndicator
                   size="large"
                   color="#0000ff"
                   className="mt-10 self-center"
                />
-            ) : moviesError ? (
-               <Text>Error: {moviesError.message}</Text>
+            ) : error ? (
+               <Text className="text-red-500 px-5 my-3">
+                  Error: {error.message}
+               </Text>
             ) : (
                <View className="flex-1 mt-5">
                   <SearchBar
@@ -52,7 +53,7 @@ const HomeView = ({
                         Latest Movies
                      </Text>
                      <FlatList
-                        data={movies}
+                        data={data}
                         renderItem={({ item }) => <MovieCard {...item} />}
                         keyExtractor={(item) => item.id.toString()}
                         numColumns={3}

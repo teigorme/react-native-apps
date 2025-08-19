@@ -1,12 +1,9 @@
-import { View, Text } from "react-native";
-import React from "react";
+import useSearchModel from "@/src/ModelViews/Search/Search.Model";
+import SearchView from "@/src/ModelViews/Search/Search.View";
 
 const Search = () => {
-  return (
-    <View>
-      <Text>Search</Text>
-    </View>
-  );
+   const props = useSearchModel();
+   return <SearchView {...props} />;
 };
 
 export default Search;

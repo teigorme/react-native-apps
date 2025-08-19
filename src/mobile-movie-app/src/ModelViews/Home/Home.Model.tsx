@@ -4,12 +4,9 @@ import { useRouter } from "expo-router";
 
 const useHomeModel = () => {
    const router = useRouter();
-   const {
-      data: movies,
-      loading: moviesLoading,
-      error: moviesError,
-   } = useFetch(() => fetchMovies({ query: "" }));
-   return { router, movies, moviesLoading, moviesError };
+
+   const { data, loading, error } = useFetch(() => fetchMovies({ query: "" }));
+   return { router, data, loading, error };
 };
 
 export default useHomeModel;
