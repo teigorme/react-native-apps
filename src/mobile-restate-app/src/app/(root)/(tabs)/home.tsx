@@ -1,6 +1,5 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Link } from "expo-router";
 
 const Index = () => {
   return (
@@ -8,7 +7,6 @@ const Index = () => {
       <Text className="text-4xl font-bold text-blue-500 mb-5">
         Welcome to ReState!
       </Text>
-  
     </View>
   );
 };

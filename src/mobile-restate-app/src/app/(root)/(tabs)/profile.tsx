@@ -1,14 +1,7 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { useProfileModel } from "@/src/ModelViews/Profile/Profile.Model";
+import ProfileView from "@/src/ModelViews/Profile/Profile.View";
 
-const Profile = () => {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Profile!
-      </Text>
-    </View>
-  );
-};
-
-export default Profile;
+export default function Profile() {
+  const props = useProfileModel();
+  return <ProfileView {...props} />;
+}
