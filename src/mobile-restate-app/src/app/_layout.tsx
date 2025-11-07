@@ -1,9 +1,8 @@
 import "@/global.css";
-import { Slot, SplashScreen } from "expo-router";
-import { StatusBar } from "react-native";
+import { SplashScreen, Stack } from "expo-router";
+import { StatusBar, View } from "react-native";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -22,9 +21,9 @@ export default function RootLayout() {
   if (!loaded) return null;
 
   return (
-    <SafeAreaView className="h-full bg-white">
-      <Slot />
+    <>
+      <Stack screenOptions={{ headerShown: false }} />
       <StatusBar barStyle="default" />
-    </SafeAreaView>
+    </>
   );
 }

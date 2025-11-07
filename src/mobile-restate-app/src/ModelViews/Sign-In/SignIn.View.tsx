@@ -5,7 +5,7 @@ import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 const SignInView = ({ handleLogin }: ReturnType<typeof useSignInModel>) => {
   return (
-    <ScrollView contentContainerClassName="h-full" className="pt-5">
+    <ScrollView contentContainerClassName="h-full bg-white">
       <Image
         source={images.onboarding}
         className="w-full h-4/6"
