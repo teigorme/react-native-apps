@@ -1,7 +1,6 @@
-import { useRouter } from "expo-router";
+import { router } from "expo-router";
 
 export const useSignInModel = () => {
-  const router = useRouter();
   const handleLogin = () => {
     router.push("/home");
   };

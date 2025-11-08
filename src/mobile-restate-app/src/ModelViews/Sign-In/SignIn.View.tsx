@@ -14,18 +14,19 @@ const SignInView = ({ handleLogin }: ReturnType<typeof useSignInModel>) => {
       <View className="px-10">
         <Text className="text-base text-center uppercase font-rubik-regular text-black-200">
           {" "}
-          Welcome to Restate
+          Bem-vindo ao Restate
         </Text>
         <Text className="text-3xl font-rubik text-black-300 text-center mt-2">
           Let's Get You Closer to{"\n"}
           <Text className="text-primary-300">Your Ideal Home</Text>
         </Text>
         <Text className="text-lg font-rubik-regular text-black-200 text-center mt-12">
-          Login to ReState with Google
+          Login no ReState com Google
         </Text>
         <TouchableOpacity
           onPress={handleLogin}
           className="bg-white shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5"
+          activeOpacity={0.7}
         >
           <View className="flex flex-row items-center justify-center">
             <Image
@@ -34,7 +35,7 @@ const SignInView = ({ handleLogin }: ReturnType<typeof useSignInModel>) => {
               resizeMode="contain"
             />
             <Text className="text-lg font-rubik-medium text-black-300 ml-2">
-              Continue with Google
+              Continue com Google
             </Text>
           </View>
         </TouchableOpacity>

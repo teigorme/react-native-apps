@@ -1,14 +1,7 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { useHomeModel } from "@/src/ModelViews/Home/Home.Model";
+import HomeView from "@/src/ModelViews/Home/Home.View";
 
-const Index = () => {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-4xl font-bold text-blue-500 mb-5">
-        Welcome to ReState!
-      </Text>
-    </View>
-  );
-};
-
-export default Index;
+export default function Home() {
+  const props = useHomeModel();
+  return <HomeView {...props} />;
+}
